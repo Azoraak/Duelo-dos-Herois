@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A2E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTurno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turno 1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- INIMIGO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#2A2A4E">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👹 Inimigo"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ProgressBar
+                android:id="@+id/pbEnemyHP"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="#E74C3C" />
+
+            <TextView
+                android:id="@+id/tvEnemyHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP: 100/100"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- JOGADOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#2A2A4E">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤 Herói"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ProgressBar
+                android:id="@+id/pbPlayerHP"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="100"
+                android:progressTint="#2ECC71" />
+
+            <TextView
+                android:id="@+id/tvPlayerHP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HP: 100/100"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- ENERGIA -->
+        <TextView
+            android:id="@+id/tvEnergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Energia: 0/100"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp" />
+
+        <ProgressBar
+            android:id="@+id/pbEnergy"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#3498DB" />
+
+        <!-- LOG -->
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:text="A batalha começou!"
+            android:textColor="#FFFF00"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:background="#2A2A4E" />
+
+        <!-- AÇÕES -->
+        <Button
+            android:id="@+id/btnAtacar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚔️ Atacar"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnDefender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🛡️ Defender"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnEspecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💥 Especial (Energia cheia)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnCurar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🧪 Curar (3)"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
